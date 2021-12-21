@@ -1,6 +1,7 @@
 <head>
     <title>SCMS Admin</title>
-    @include('includes.header');
+  @include('includes.header')
+
 </head>
 <body class="sb-nav-fixed">
 @include('includes.head');

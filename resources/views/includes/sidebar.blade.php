@@ -15,8 +15,8 @@
                 </a>
                 <div class="collapse" id="students" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="addstudent">Enroll New student</a>
-                        <a class="nav-link" href="viewstudent">View student</a>
+                        <a class="nav-link" href="/addstudent">Enroll New student</a>
+                        <a class="nav-link" href="/viewstudent">View student</a>
 {{--                        <a class="nav-link" href="assignclass">Assign Students</a>--}}
                     </nav>
                 </div>

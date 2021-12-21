@@ -6,6 +6,7 @@ use App\Models\Student;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
+
 class studentController extends Controller
 {
     public function index(){
@@ -36,6 +37,7 @@ class studentController extends Controller
 
         $student->save();
 
-        return redirect('addstudent');
+        return redirect()->back()
+            ->with('success', 'Student enrolled successfully!');
     }
     }

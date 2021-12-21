@@ -1,6 +1,7 @@
 <head>
     <title>SCMS Admin</title>
-    @include('includes.header');
+  @include('includes.header')
+
 </head>
 <body class="sb-nav-fixed">
 @include('includes.head');
@@ -18,13 +19,12 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-1">
 
                             <div class="card-body">
-                                <form action = "/assign/{{ $stud->id }}" method = "post">
+                                <form action = "/reassign/{{ $student['0']->id}}" method = "post">
                                     <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
                                     <div class="form-group">
                                         <label class="small mb-1" for="inputPassword">Student</label>
-                                        <select class="form-control" id="inputPassword" name="class">
-                                            <option class="selected">Choose Student</option>
-                                            @foreach ($student as $stud)
+                                        <select class="form-control" id="inputPassword" name="student">
+                                                        @foreach ($student as $stud)
                                                 <option value="{{ $stud->id }}">{{ $stud->name }}</option>
                                             @endforeach
                                         </select>

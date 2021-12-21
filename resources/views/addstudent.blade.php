@@ -1,8 +1,10 @@
 <head>
     <title>SCMS Admin</title>
-    @include('includes.header');
+  @include('includes.header')
+
 </head>
 <body class="sb-nav-fixed">
+@include('sweet::alert')
 @include('includes.head');
 <div id="layoutSidenav">
     @include('includes.sidebar')

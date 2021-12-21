@@ -14,12 +14,13 @@ class assignclasscontroller extends Controller
     }
     public function show($id) {
         $stud = DB::select('select * from students where id = ?',[$id]);
-        return view('assignclass',['student'=>$stud]);
+        return view('/assignclass',['student'=>$stud]);
     }
     public function edit(Request $request,$id) {
-        $name = $request->input('stud_name');
-        DB::update('update student set name = ? where id = ?',[$name,$id]);
+
+        $class = $request->input('class');
+        DB::update('update students set class = ? where id = ?',[$class,$id]);
         echo "Record updated successfully.<br/>";
-        echo '<a href = "/edit-records">Click Here</a> to go back.';
+        echo '<a href = "/viewstudent">Click Here</a> to go back.';
     }
 }

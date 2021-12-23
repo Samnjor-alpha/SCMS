@@ -22,6 +22,9 @@ Route::get('/addstudent', function () {
 Route::get('/assignclass', function () {
     return view('assignclass');
 });
+Route::get('/managecalender', function () {
+    return view('managecalender');
+});
 
 
 Route::get('/markregister', [App\Http\Controllers\markregistercontroller::class, 'index'])->name('markregister');
@@ -31,6 +34,8 @@ Route::post('reassign/{id}', [App\Http\Controllers\assignclasscontroller::class,
 Route::post('/insert', [App\Http\Controllers\studentController::class, 'storestudent'])->name('addstudent');
 Route::get('markpresent/{id}/class/{class}', [App\Http\Controllers\markregistercontroller::class, 'markpresent'])->name('markregister');
 Route::get('markabsent/{id}/class/{class}', [App\Http\Controllers\markregistercontroller::class, 'markabsent'])->name('markregister');
+Route::get('calendar-event', [App\Http\Controllers\CalenderController::class, 'index']);
+Route::post('calendar-crud-ajax', [App\Http\Controllers\CalenderController::class, 'calendarEvents']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -23,19 +23,19 @@ class markregistercontroller extends Controller
         $present->date = Carbon::now(); # new \Datetime()
         $present->save();
         echo "Student marked present.<br/>";
-        echo '<a href = "/viewstudent">Click Here</a> to go back.';
+        echo '<a href = "/viewregister">Click Here</a> to go back.';
 
 
     }
     public function markabsent(Request $request,$id,$class){
         $present = new markregister();
-        $present->attendance="present";
+        $present->attendance="absent";
         $present->user_id=$id;
         $present->class=$class;
         $present->date = Carbon::now(); # new \Datetime()
         $present->save();
         echo "Student marked absent.<br/>";
-        echo '<a href = "/viewstudent">Click Here</a> to go back.';
+        echo '<a href = "/viewregister">Click Here</a> to go back.';
 
 
     }

@@ -17,19 +17,25 @@
                 <div class="row">
                     <div class="col-xl-6 col-md-6">
                         <div class="card bg-primary text-white mb-4">
-                            <div class="card-body">Total Students</div>
+                            <div class="card-body">
+                                Total Students
+                            <p class="strong">33</p>
+                            </div>
 
                         </div>
                     </div>
 
                     <div class="col-xl-6 col-md-6">
                         <div class="card bg-success text-white mb-4">
-                            <div class="card-body">Total SMS</div>
+                            <div class="card-body">Total SMS
+                                <p class="strong">33</p></div>
 
                         </div>
                     </div>
 
                 </div>
+
+
 
 
             </div>

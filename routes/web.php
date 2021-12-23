@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,14 @@ Route::get('markpresent/{id}/class/{class}', [App\Http\Controllers\markregisterc
 Route::get('markabsent/{id}/class/{class}', [App\Http\Controllers\markregistercontroller::class, 'markabsent'])->name('markregister');
 Route::get('calendar-event', [App\Http\Controllers\CalenderController::class, 'index']);
 Route::post('calendar-crud-ajax', [App\Http\Controllers\CalenderController::class, 'calendarEvents']);
+Route::get('/viewregister', [App\Http\Controllers\viewregistercontroller::class, 'index'])->name('viewregister');
+Route::get('/studentname/{$id}', [App\Http\Controllers\viewregistercontroller::class, 'studentname'])->name('viewregister');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', function () {
+    return redirect('login');
+})->middleware('auth');
+
+

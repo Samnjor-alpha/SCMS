@@ -24,10 +24,13 @@ Route::get('/assignclass', function () {
 });
 
 
+Route::get('/markregister', [App\Http\Controllers\markregistercontroller::class, 'index'])->name('markregister');
 Route::get('/viewstudent', [App\Http\Controllers\studentviewcontoller::class, 'index'])->name('viewstudent');
 Route::get('Assign/{id}', [App\Http\Controllers\assignclasscontroller::class, 'show'])->name('assignclass');
 Route::post('reassign/{id}', [App\Http\Controllers\assignclasscontroller::class, 'edit'])->name('assignclass');
 Route::post('/insert', [App\Http\Controllers\studentController::class, 'storestudent'])->name('addstudent');
+Route::get('markpresent/{id}/class/{class}', [App\Http\Controllers\markregistercontroller::class, 'markpresent'])->name('markregister');
+Route::get('markabsent/{id}/class/{class}', [App\Http\Controllers\markregistercontroller::class, 'markabsent'])->name('markregister');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

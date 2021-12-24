@@ -28,6 +28,7 @@ Route::get('/managecalender', function () {
 });
 
 
+
 Route::get('/markregister', [App\Http\Controllers\markregistercontroller::class, 'index'])->name('markregister');
 Route::get('/viewstudent', [App\Http\Controllers\studentviewcontoller::class, 'index'])->name('viewstudent');
 Route::get('Assign/{id}', [App\Http\Controllers\assignclasscontroller::class, 'show'])->name('assignclass');
@@ -41,6 +42,8 @@ Route::get('/viewregister', [App\Http\Controllers\viewregistercontroller::class,
 Route::get('/studentname/{$id}', [App\Http\Controllers\viewregistercontroller::class, 'studentname'])->name('viewregister');
 Route::get('/sendbulksms', [App\Http\Controllers\SendbulksmsController::class, 'index'])->name('sendbulksms');
 Route::post('/sendsms', [App\Http\Controllers\SendbulksmsController::class, 'sendsms'])->name('sendbulksms');
+Route::get('/viewbulk', [App\Http\Controllers\viewbulksmscontroller::class, 'index'])->name('viewbulk');
+Route::get('clear/{id}', [App\Http\Controllers\viewbulksmscontroller::class, 'clear'])->name('viewbulk');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

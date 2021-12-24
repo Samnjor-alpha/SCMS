@@ -23,9 +23,7 @@ Route::get('/addstudent', function () {
 Route::get('/assignclass', function () {
     return view('assignclass');
 });
-Route::get('/managecalender', function () {
-    return view('managecalender');
-});
+
 
 
 

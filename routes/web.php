@@ -39,6 +39,8 @@ Route::get('calendar-event', [App\Http\Controllers\CalenderController::class, 'i
 Route::post('calendar-crud-ajax', [App\Http\Controllers\CalenderController::class, 'calendarEvents']);
 Route::get('/viewregister', [App\Http\Controllers\viewregistercontroller::class, 'index'])->name('viewregister');
 Route::get('/studentname/{$id}', [App\Http\Controllers\viewregistercontroller::class, 'studentname'])->name('viewregister');
+Route::get('/sendbulksms', [App\Http\Controllers\SendbulksmsController::class, 'index'])->name('sendbulksms');
+Route::post('/sendsms', [App\Http\Controllers\SendbulksmsController::class, 'sendsms'])->name('sendbulksms');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

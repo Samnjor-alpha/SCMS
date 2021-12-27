@@ -50,21 +50,3 @@ Route::get('/', function () {
     return redirect('login');
 })->middleware('auth');
 
-Route::get('/addstudent', function () {
-    return redirect('login');
-})->middleware('auth');
-Route::get('/viewstudent', function () {
-    return redirect('login');
-})->middleware('auth');
-Route::get('/markregister', function () {
-    return redirect('login');
-})->middleware('auth');
-Route::get('/viewregister', function () {
-    return redirect('login');
-})->middleware('auth');
-Route::get('/viewbulk', function () {
-    return redirect('login');
-})->middleware('auth');
-Route::get('/sendbulksms', function () {
-    return redirect('login');
-})->middleware('auth');

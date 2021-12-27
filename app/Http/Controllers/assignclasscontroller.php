@@ -20,7 +20,7 @@ class assignclasscontroller extends Controller
 
         $class = $request->input('class');
         DB::update('update students set class = ? where id = ?',[$class,$id]);
-        echo "Record updated successfully.<br/>";
-        echo '<a href = "/viewstudent">Click Here</a> to go back.';
+        return redirect()->back()
+            ->with('success', 'Class assigned successfully!');
     }
 }

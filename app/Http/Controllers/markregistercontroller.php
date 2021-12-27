@@ -22,8 +22,8 @@ class markregistercontroller extends Controller
         $present->class=$class;
         $present->date = Carbon::now(); # new \Datetime()
         $present->save();
-        echo "Student marked present.<br/>";
-        echo '<a href = "/viewregister">Click Here</a> to go back.';
+        return redirect()->back()
+            ->with('success', 'student marked present!');
 
 
     }
@@ -34,8 +34,8 @@ class markregistercontroller extends Controller
         $present->class=$class;
         $present->date = Carbon::now(); # new \Datetime()
         $present->save();
-        echo "Student marked absent.<br/>";
-        echo '<a href = "/viewregister">Click Here</a> to go back.';
+        return redirect()->back()
+            ->with('warning', 'Student marked absent!');
 
 
     }

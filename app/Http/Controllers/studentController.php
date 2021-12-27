@@ -39,5 +39,6 @@ class studentController extends Controller
 
         return redirect()->back()
             ->with('success', 'Student enrolled successfully!');
+
     }
     }

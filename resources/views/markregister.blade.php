@@ -17,7 +17,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="card shadow-lg border-0 rounded-lg mt-1">
-
+                            <div class="rounded-lg mt-1">
+                                @include('includes/msg')
+                            </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable">

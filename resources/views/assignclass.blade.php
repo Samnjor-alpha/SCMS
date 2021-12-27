@@ -17,7 +17,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="card shadow-lg border-0 rounded-lg mt-1">
-
+                            <div class="rounded-lg mt-1">
+                                @include('includes/msg')
+                            </div>
                             <div class="card-body">
                                 <form action = "/reassign/{{ $student['0']->id}}" method = "post">
                                     <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">

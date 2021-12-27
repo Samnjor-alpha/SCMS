@@ -38,8 +38,8 @@ class SendbulksmsController extends Controller
         $studs = DB::insert('insert into sms set message = ?,tel_no=?,sent=?',[$sms,$input['tels'],$sent]);
 
 
-        echo "SMS sent successfully<br/>";
-        echo '<a href = "/sendbulksms">Click Here</a> to go back.';
+        return redirect()->back()
+            ->with('success', 'SMS send successfully!');
 
     }
 }

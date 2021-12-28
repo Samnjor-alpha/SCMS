@@ -31,9 +31,7 @@
                                         @foreach ($students as $studs)
                                             <tr>
                                                 <td>{{ $studs->id }}</td>
-                                                <td>{{
-
-    $studs->user_id }}</td>
+                                                <td>{{ getstudnames($studs->user_id) }}</td>
                                                 <td>{{ $studs->date }}</td>
                                                 <td>Form {{ $studs->class }}</td>
                                                 <td>{{ $studs->attendance }}</td>
